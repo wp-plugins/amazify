@@ -1,5 +1,5 @@
 === Amazify ===
-Contributors: MaximeB,juliobox
+Contributors: MaximeB
 Tags: amazon, marketing, seo
 Requires at least: 3.0.1
 Tested up to: 4.1.1
