@@ -41,12 +41,14 @@ Supported Amazon countries are : .com, .co.uk, .fr, .it, .de, .co.jp, .ca
 
 == Changelog ==
 
-**2015/03/26**
+**1.1**
 
+* 2015/03/26
 * The options page is now under "Settings->Amazify"
 * "& amp ;" vs "& #038 ;" bug fixed
-* The plugin uses now Settings API
+* The plugin uses now Settings API (thanks to juliobox)
 
-**2015/03/25**
+**1.0**
 
+* 2015/03/25
 * First release

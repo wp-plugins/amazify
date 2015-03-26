@@ -26,14 +26,14 @@ function amazify_settings_init(){
 
 	add_settings_section(
 		'amazify_Amazify_section', 
-		__( 'Amazify options', 'wordpress' ), 
+		__( 'Amazify options', 'amazify' ), 
 		'amazify_settings_section_callback', 
 		'Amazify'
 	);
 
 	add_settings_field( 
 		'amazify_tag', 
-		__( 'Your Amazon Tag', 'wordpress' ), 
+		__( 'Your Amazon Tag', 'amazify' ), 
 		'amazify_tag_render', 
 		'Amazify', 
 		'amazify_Amazify_section' 
@@ -41,7 +41,7 @@ function amazify_settings_init(){
 
 	add_settings_field( 
 		'amazify_nofollow', 
-		__( 'Add nofollow ?', 'wordpress' ), 
+		__( 'Add nofollow?', 'amazify' ), 
 		'amazify_nofollow_render', 
 		'Amazify', 
 		'amazify_Amazify_section' 
@@ -49,7 +49,7 @@ function amazify_settings_init(){
 
 	add_settings_field( 
 		'amazify_target', 
-		__( 'Add target="_blank" ?', 'wordpress' ), 
+		__( 'Add target="_blank"?', 'amazify' ), 
 		'amazify_target_render', 
 		'Amazify', 
 		'amazify_Amazify_section' 
