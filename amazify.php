@@ -4,7 +4,7 @@
 Plugin Name: Amazify
 Plugin URI: https://bridon.fr
 Description: Add automatically your tag to all Amazon links in your posts. Replace it if the tag is already existing. Also add nofollow and target="_blank".
-Version: 1.0
+Version: 1.1.0.1
 Author: Maxime Bridon
 Author URI: https://bridon.fr
 License: GPLv2 or later
