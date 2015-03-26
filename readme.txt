@@ -41,15 +41,15 @@ Supported Amazon countries are : .com, .co.uk, .fr, .it, .de, .co.jp, .ca
 
 == Changelog ==
 
-=1.1.0.1=
+= 1.1.0.1 =
 * Fixed bug showing options attributes in link anchor.
 
-=1.1=
+= 1.1 =
 * 2015/03/26
 * The options page is now under "Settings->Amazify"
 * "& amp ;" vs "& #038 ;" bug fixed
 * The plugin uses now Settings API (thanks to juliobox)
 
-=1.0=
+= 1.0 =
 * 2015/03/25
 * First release
