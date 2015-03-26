@@ -109,29 +109,37 @@ function AddTag($content){
 	$regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>(.*)<\/a>";
     if(preg_match_all("/$regexp/siU", $content, $link_matches, PREG_SET_ORDER)) {
 		foreach($link_matches as $match) {
+
 			if(preg_match('/(.*)amazon\.(com|co.uk|de|fr|co.jp|ca)+/i', $match[2])){
 				$thelink = str_replace('&#038;',"&amp;",$match[2]);
 				$parsed = parse_url($thelink);
-				
+				$options_attr = "";
 				if(preg_match('#tag#i',$parsed['query'])){
 					$query_string = html_entity_decode($parsed['query']);
 					parse_str($query_string, $variables);
 					
 					$variables["tag"] = $TagAmazify;
 					$new_query = http_build_query($variables, '', '&amp;');
-					$newlink = $parsed['scheme'].'://'.$parsed['host'].$parsed['path'].'?'.$new_query.'"';
+					
+					if($options_amazify['amazify_nofollow'] == '1'){
+						$options_attr .= ' rel="nofollow"';
+					}
+					if($options_amazify['amazify_target'] == '1'){
+						$options_attr .= ' target="_blank"';
+					}
+					$newlink = '<a href="'.$parsed['scheme'].'://'.$parsed['host'].$parsed['path'].'?'.$new_query.'"'.$options_attr.'>'.$match[3].'</a>';
 				}else{
-					$newlink = $thelink.'&amp;tag='.$TagAmazify.'"';
+					if($options_amazify['amazify_nofollow'] == '1'){
+						$options_attr .= ' rel="nofollow"';
+					}
+					if($options_amazify['amazify_target'] == '1'){
+						$options_attr .= ' target="_blank"';
+					}
+					$newlink = '<a href="'.$thelink.'&amp;tag='.$TagAmazify.'"'.$options_attr.'>'.$match[3].'</a>';
 				}
 				
-				if($options_amazify['amazify_nofollow'] == '1'){
-					$newlink .= ' rel="nofollow"';
-				}
-				if($options_amazify['amazify_target'] == '1'){
-					$newlink .= ' target="_blank"';
-				}
-
-				$content = str_replace($match[2],$newlink,$content);	
+				
+				$content = str_replace($match[0], $newlink, $content);	
 			}
 		}	
 	}
