@@ -1,18 +1,20 @@
 === Amazify ===
 Contributors: MaximeB
-Tags: amazon, marketing, seo
+Tags: amazon, marketing, seo, affiliate
 Requires at least: 3.0.1
 Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2 or later
 
-Automatically edit any Amazon link in your posts to add your Amazon tag.
+Automatically edit every Amazon link in your posts to add your Amazon affiliate tag. Safest way to be sure to earn commissions from Amazon sales !
 
 == Description ==
 
-Amazify is a very simple plugin that edit any amazon link to add you own tag. In addition you can tell him to add a nofollow attribute and/or a target="_blank".
+Amazify is a very simple plugin that will edit any Amazon link in all posts to add your affiliate tag. If there is already an affiliate tag in the link, the plugin will replace it with yours.
 
-You don't need to check all links you (or others writers) added in the posts anymore, this plugin will automatically take care of the presence of your Amazon tag, to be sure that you collect the affiliate commissions.
+In addition you can tell him to automatically add a nofollow attribute and/or a target="_blank".
+
+You don't need to check anymore every single Amazon links you or other writers added in your posts !
 
 **Features :** 
 
@@ -42,6 +44,7 @@ Supported Amazon countries are : .com, .co.uk, .fr, .it, .de, .co.jp, .ca
 == Changelog ==
 
 = 1.1.0.1 =
+* 2015/03/26
 * Fixed bug showing options attributes in link anchor.
 
 = 1.1 =
