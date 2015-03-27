@@ -1,4 +1,4 @@
-=== Amazify ===
+=== Amazon Affiliate Tag ===
 Contributors: MaximeB
 Tags: amazon, marketing, seo, affiliate
 Requires at least: 3.0.1
