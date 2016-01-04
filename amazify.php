@@ -4,7 +4,7 @@
 Plugin Name: Amazon Affiliate Tag
 Plugin URI: https://wordpress.org/plugins/amazify/
 Description: Add automatically your tag to all Amazon links in your posts. Replace it if the tag is already existing. Also add nofollow and target="_blank".
-Version: 1.1.0.1
+Version: 1.1.0.2
 Author: Maxime Bridon
 Author URI: https://bridon.fr
 License: GPLv2 or later
@@ -135,7 +135,12 @@ function AddTag($content){
 					if($options_amazify['amazify_target'] == '1'){
 						$options_attr .= ' target="_blank"';
 					}
-					$newlink = '<a href="'.$thelink.'&amp;tag='.$TagAmazify.'"'.$options_attr.'>'.$match[3].'</a>';
+					//Check if link have a query
+					if (isset($parsed['query'])){
+						$newlink = '<a href="'.$thelink.'&amp;tag='.$TagAmazonTag.'"'.$options_attr.'>'.$match[3].'</a>';
+					} else {
+						$newlink = '<a href="'.$thelink.'?tag='.$TagAmazonTag.'"'.$options_attr.'>'.$match[3].'</a>';
+					}
 				}
 				
 				
